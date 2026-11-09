@@ -1,0 +1,11 @@
+.venv/
+.venv-verify/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.artifacts/
+.idea/
+.vscode/
+.env
+*.log

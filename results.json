@@ -1,0 +1,52 @@
+{
+  "seed": 42,
+  "train_rows": 614,
+  "test_rows": 154,
+  "baseline": {
+    "linear": {
+      "cv_rmse": 2.828453196914384,
+      "cv_std": 0.1235495113826791
+    },
+    "decision_tree": {
+      "cv_rmse": 0.6472078080939344,
+      "cv_std": 0.1113035844062299
+    },
+    "random_forest": {
+      "cv_rmse": 0.5359458221419935,
+      "cv_std": 0.03397304139145991
+    },
+    "xgboost": {
+      "cv_rmse": 0.4357994290374075,
+      "cv_std": 0.027593009507552415
+    }
+  },
+  "tuned": {
+    "random_forest": {
+      "cv_rmse": 0.5280825911645182,
+      "parameters": {
+        "model__max_depth": 8,
+        "model__min_samples_leaf": 1
+      }
+    },
+    "xgboost": {
+      "cv_rmse": 0.3986153384094746,
+      "parameters": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 4,
+        "model__n_estimators": 300
+      }
+    }
+  },
+  "selected_model": "xgboost",
+  "selected_parameters": {
+    "model__learning_rate": 0.1,
+    "model__max_depth": 4,
+    "model__n_estimators": 300
+  },
+  "selected_cv_rmse": 0.3986153384094746,
+  "test_metrics": {
+    "rmse": 0.40391702315460576,
+    "mae": 0.2896493744788231,
+    "r2": 0.9984347578385823
+  }
+}
